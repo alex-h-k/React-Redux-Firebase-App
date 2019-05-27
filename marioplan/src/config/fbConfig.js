@@ -1,7 +1,7 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
-const firebaseConfig = {
+const config = {
   apiKey: "AIzaSyClD-SDbteCBuHujsz0dNsZDakrJFo6Uzw",
   authDomain: "net-ninja-marioplan-5de0b.firebaseapp.com",
   databaseURL: "https://net-ninja-marioplan-5de0b.firebaseio.com",
@@ -12,6 +12,5 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(config);
-firebase.firestore().settings({ timestampsInSnapshots: true });
 
 export default firebase;

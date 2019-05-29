@@ -20,7 +20,7 @@ const store = createStore(
   )
 );
 
-store.attachAuthIsReady.then(() => {
+store.firebaseAuthIsReady.then(() => {
   ReactDOM.render(
     <Provider store={store}>
       <App />

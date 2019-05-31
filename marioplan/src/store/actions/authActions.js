@@ -39,13 +39,13 @@ export const signUp = newUser => {
           .collection("users")
           .doc(resp.user.uid)
           .set({
-            firstName: newUser.firstname,
+            firstName: newUser.firstName,
             lastName: newUser.lastName,
             initials: newUser.firstName[0] + newUser.lastName[0]
-          })
-          .then(() => {
-            dispatch({ type: "SIGNUP_SUCESS" });
           });
+      })
+      .then(() => {
+        dispatch({ type: "SIGNUP_SUCCESS" });
       })
       .catch(err => {
         dispatch({ type: "SIGNUP_ERROR", err });
